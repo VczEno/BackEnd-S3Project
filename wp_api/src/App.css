@@ -1,0 +1,9 @@
+.dettaglio-post img:first-of-type { /* l'immagine embeddada nel contenuto del post */
+    width: 200px;
+    height: auto;
+   
+}
+
+.dettaglio-post .wp-block-heading {
+    text-align: center;
+}

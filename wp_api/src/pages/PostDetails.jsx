@@ -22,14 +22,13 @@ export const PostDetails = ({endpoint}) => {
   useEffect(getPostData, [])
 
   return (
-    <Container>
+    <Container className='dettaglio-post'>
         {isLoading && <Spinner animation='border'/>} {/* migliorare */}
         {errMsg && <Alert>{errMsg}</Alert>} {/* migliorare */}
-        <div>PostDetails, numero {id}</div>
-        {!isLoading && !errMsg && 
+        {!isLoading && !errMsg && post.title &&
         <>
-            <h1>{post.title.rendered}</h1>
-                <p>{post.content.rendered}</p>
+            
+                <p><span dangerouslySetInnerHTML={{__html:post.content.rendered}} /></p>
         </>      }
     </Container>
   )

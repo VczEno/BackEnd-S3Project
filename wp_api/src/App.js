@@ -5,6 +5,7 @@ import { Nav } from './components/Nav';
 import { Footer } from './components/Footer';
 import { Main } from './pages/Main';
 import { PostDetails } from './pages/PostDetails';
+import { Users } from './pages/Users';
 
 
 
@@ -17,6 +18,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Main endpoint={endpoint}/>}/>
       <Route path='/post/:id' element={<PostDetails endpoint= {endpoint}/>} />
+      <Route path='/users' element={<Users endpoint= {endpoint}/>} />
     </Routes>
    
    <Footer/>
